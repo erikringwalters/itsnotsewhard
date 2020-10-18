@@ -25,11 +25,10 @@
       var row = $('<tr>')
       for(j=0; j<4; j++){
         var img = $('<img src= "./images/tile'+ tileNum + '.jpg" class="tile">');
-        var anchor = $('<a href="details?tile=' + tileNum + '">').html(img);
-        var cell = $('<td>').html(anchor)
-
+        var anchor = $('<a href="details?tile=' + tileNum + '">').append(img);
+        var cell = $('<td>').append(anchor);
         row.append(cell);
-        tileNum++
+        tileNum++;
       }
       table.append(row);
 
