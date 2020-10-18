@@ -1,5 +1,5 @@
 <!Doctype html>
-<link rel="stylesheet" href="../css/home.css">
+<link rel="stylesheet" href="./css/home.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
@@ -15,26 +15,28 @@
 
   <h3 class=sansserif>by Giana Hamilton, Leslie Maldonado, Alyssa Riley, Kelly Medina-López, and Erik Ring-Walters</h3>
 
-  <div id="here_table"></div>
+  <div id="tileTable"></div>
 
 
   <script>
   var tileNum = 0;
-  var table = $('<table>').addClass('foo');
+  var table = $('<table>');
   for(i=0; i<6; i++){
-      var row = $('<tr>').addClass('bar');
+      var row = $('<tr>')
       for(j=0; j<4; j++){
-        var cell = $('<td>').addClass('bar')
-        var img = $('<img>').attr("src", "../images/image ("+ tileNum +").jpg" ).addClass('tile');
+        var img = $('<img src= "./images/image ('+ tileNum + ').jpg" class="tile">');
+        var anchor = $('<a href="details?tile=' + tileNum + '">').html(img);
+        var cell = $('<td>').html(anchor)
+
         table.append(cell);
-        table.append(img);
         tileNum++
       }
       table.append(row);
 
   }
 
-  $('#here_table').append(table);
+  $('#tileTable').append(table);
       
   </script>
+
 </body>
