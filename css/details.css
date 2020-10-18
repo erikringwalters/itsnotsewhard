@@ -1,54 +1,57 @@
 h1{
-    text-align: center;
-    font-size: 24pt;
-  }
-  small {
-    font-size: smaller;
-  }
-  .zoomed-image {
-    background-size: cover;
-    cursor: pointer;
-  }
-  .tileImg{
-    padding: 10px;
-    border-radius: 10%;
-    float: left;
-    text-align: left;
-  }
-  span.indented{
-    text-indent: 70px;
-  }
-  span.noIndent{
-    text-indent: 0px;
-    border-radius: 5px;
-  
-  }
-  span{
-    overflow-y: scroll;
-  }
-  a{
-    font-size: 16pt;
-    font-weight: bold;
-    color: black;
-  }
-  
-  .tileImg{
-    transition: all .5s ease-in-out;
-  }
-  .tileImg:hover {
-    transform: scale(1.4);
-  }
-  .backToQuilt {
-    color: #000000;
-  }
-  .prevTile{
-    float: left;
-  }
-  .nextTile{
-    float: right;
-  }
-  .galleryPic{
-    border-radius: 5%;
-    height: 500px;
-  }
+  text-align: center;
+  font-size: 30pt;
+}
+small {
+  font-size: smaller;
+}
+.zoomed-image {
+  background-size: cover;
+  cursor: pointer;
+}
+
+span.indented{
+  text-indent: 70px;
+}
+span.noIndent{
+  text-indent: 0px;
+  border-radius: 5px;
+
+}
+span{
+  overflow-y: scroll;
+}
+a{
+  font-size: 16pt;
+  font-weight: bold;
+  color: black;
+}
+.tileImg{
+  padding: 10px;
+  border-radius: 10%;
+  float: left;
+  text-align: left;
+  background-color: #000000;
+  width: 40%;
+  transition: all .5s ease-in-out;
+}
+.tileImg:hover {
+  transform: scale(1.05);
+}
+.backToQuilt {
+  color: #000000;
+}
+.prevTile{
+  float: left;
+}
+.nextTile{
+  float: right;
+}
+.galleryPic{
+  border-radius: 5%;
+  height: 500px;
+}
+#detailsDiv {
+  padding: 20px;
+}
   

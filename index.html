@@ -23,15 +23,24 @@
   var table = $('<table>');
   for(i=0; i<6; i++){
       var row = $('<tr>')
+
       for(j=0; j<4; j++){
-        var img = $('<img src= "./images/tile'+ tileNum + '.jpg" class="tile">');
-        var anchor = $('<a href="details?tile=' + tileNum + '">').append(img);
-        var cell = $('<td>').append(anchor);
+        var img = $('<img>')
+          .attr('src', './images/tile'+ tileNum + '.jpg')
+          .addClass('tile');
+
+        var anchor = $('<a>')
+          .attr('href','details.html?tile=' + tileNum)
+          .append(img);
+
+        var cell = $('<td>')
+          .append(anchor);
+
         row.append(cell);
+        
         tileNum++;
       }
       table.append(row);
-
   }
 
   $('#tileTable').append(table);

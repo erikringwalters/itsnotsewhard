@@ -1,5 +1,34 @@
 <!Doctype html>
-<link rel="stylesheet" href="../css/details.css">
+<link rel="stylesheet" href="./css/details.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <body>
-    tile details
+    <h1>tile details</h1>
+
+    <div id='detailsDiv'></div>
 </body>
+
+<script>
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};
+
+tileNum = getUrlParameter('tile');
+
+var img = $('<img>')
+          .attr('src', './images/tile'+ tileNum + '.jpg')
+          .addClass('tileImg');
+
+$('#detailsDiv').append(img);
+</script>
