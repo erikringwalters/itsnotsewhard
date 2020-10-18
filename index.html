@@ -24,7 +24,7 @@
   for(i=0; i<6; i++){
       var row = $('<tr>')
       for(j=0; j<4; j++){
-        var img = $('<img src= "./images/image ('+ tileNum + ').jpg" class="tile">');
+        var img = $('<img src= "./images/tile'+ tileNum + '.jpg" class="tile">');
         var anchor = $('<a href="details?tile=' + tileNum + '">').html(img);
         var cell = $('<td>').html(anchor)
 
