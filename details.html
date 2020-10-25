@@ -3,8 +3,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <body>
-    <h1>tile details</h1>
-
+    <div id='titleDiv'></div>
     <div id='detailsDiv'></div>
 </body>
 
@@ -31,4 +30,32 @@ var img = $('<img>')
           .addClass('tileImg');
 
 $('#detailsDiv').append(img);
+
+var title, body, image1, image2;
+
+var json_text = '{"tile":[' +
+    '{' +
+        '"title":"Get Ready",' + 
+        '"body":"text",' + 
+        '"image1":"",' +
+        '"image2":""' +
+    '} ' + 
+']}';
+
+obj = JSON.parse(json_text);
+
+title = obj.tile[tileNum].title;
+body = obj.tile[tileNum].body;
+
+h1 = $('<h1>');
+h1.append(title);
+
+span = $('<span>');
+span.addClass('indented');
+span.append(body);
+
+$('#titleDiv').append(h1);
+
+$('#detailsDiv').append(span);
+
 </script>
