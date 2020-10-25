@@ -36,33 +36,35 @@ var title, body, image1, image2;
 var obj = {"tile":[ 
     { 
         "title":"Get Ready", 
-        "body":"text", 
-        "image1":"",
-        "image2":""
+        "body": [
+            "This project, “Quilting Composition” as we lovingly refer to it, is a multimodal project that spans years of scholarship, sewing, and social justice. With it we try to represent our experience: a physical/digital compilation of mixed media, mixed methods, mixed writers, theories, and identities. The digital quilt you see here represents a physical quilt that we sewed as part of an upper division writing in the disciplines class, and the physical quilt represents our diverse embodied realities. Our immediate goal with this project is to contribute to ongoing conversations about critical making as composition pedagogy and provide pedagogical and practical implications for employing critical making in the writing classroom. Our larger goal is to solidify the connections between critical making and social justice, advancing critical making as social justice classroom praxis that answers the pedagogical and curricular needs of diverse student populations (Austin & Oseguera, 2004). ",
+            "This project, “Quilting Composition” as we lovingly refer to it, is a multimodal project that spans years of scholarship, sewing, and social justice. With it we try to represent our experience: a physical/digital compilation of mixed media, mixed methods, mixed writers, theories, and identities. The digital quilt you see here represents a physical quilt that we sewed as part of an upper division writing in the disciplines class, and the physical quilt represents our diverse embodied realities. Our immediate goal with this project is to contribute to ongoing conversations about critical making as composition pedagogy and provide pedagogical and practical implications for employing critical making in the writing classroom. Our larger goal is to solidify the connections between critical making and social justice, advancing critical making as social justice classroom praxis that answers the pedagogical and curricular needs of diverse student populations (Austin & Oseguera, 2004). ", 
+        ],
+        "image":"",
+        "imageSubtitle":""
     }, 
-    { 
-        "title":"The Quilters", 
-        "body":"text", 
-        "image1":"",
-        "image2":""
-    },  
+    
 ]};
 
-// obj = JSON.parse(json_text);
 
 title = obj.tile[tileNum].title;
 body = obj.tile[tileNum].body;
 console.log(obj);
 
 h1 = $('<h1>');
+h1.addClass('sansserif');
 h1.append(title);
 
-span = $('<span>');
-span.addClass('indented');
-span.append(body);
+
+for(i = 0; i < 5; i++) {
+    p = $('<p>');
+    p.addClass('indented');
+    p.addClass('sansserif');
+    p.append(body[i]);
+    $('#detailsDiv').append(p);
+}
 
 $('#titleDiv').append(h1);
 
-$('#detailsDiv').append(span);
 
 </script>

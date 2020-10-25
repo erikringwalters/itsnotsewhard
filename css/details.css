@@ -5,15 +5,19 @@ h1{
 small {
   font-size: smaller;
 }
+
+.sansserif {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .zoomed-image {
   background-size: cover;
   cursor: pointer;
 }
-
-span.indented{
+.indented{
   text-indent: 70px;
 }
-span.noIndent{
+.noIndent{
   text-indent: 0px;
   border-radius: 5px;
 
