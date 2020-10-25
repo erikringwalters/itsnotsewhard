@@ -33,19 +33,26 @@ $('#detailsDiv').append(img);
 
 var title, body, image1, image2;
 
-var json_text = '{"tile":[' +
-    '{' +
-        '"title":"Get Ready",' + 
-        '"body":"text",' + 
-        '"image1":"",' +
-        '"image2":""' +
-    '} ' + 
-']}';
+var obj = {"tile":[ 
+    { 
+        "title":"Get Ready", 
+        "body":"text", 
+        "image1":"",
+        "image2":""
+    }, 
+    { 
+        "title":"The Quilters", 
+        "body":"text", 
+        "image1":"",
+        "image2":""
+    },  
+]};
 
-obj = JSON.parse(json_text);
+// obj = JSON.parse(json_text);
 
 title = obj.tile[tileNum].title;
 body = obj.tile[tileNum].body;
+console.log(obj);
 
 h1 = $('<h1>');
 h1.append(title);
