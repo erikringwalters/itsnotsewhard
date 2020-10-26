@@ -38,6 +38,7 @@ a{
   background-color: #000000;
   width: 40%;
   transition: all .5s ease-in-out;
+  margin: 20px;
 }
 .tileImg:hover {
   transform: scale(1.05);
@@ -56,6 +57,8 @@ a{
   height: 500px;
 }
 #detailsDiv {
+  /* display: inline-block;  */
   padding: 20px;
+  margin-left: 30px;
 }
   
