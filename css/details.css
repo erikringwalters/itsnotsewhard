@@ -53,8 +53,8 @@ a{
   float: right;
 }
 .galleryPic{
-  border-radius: 5%;
-  height: 500px;
+  border-radius: 10%;
+  width: 50%;
 }
 #detailsDiv {
   /* display: inline-block;  */
