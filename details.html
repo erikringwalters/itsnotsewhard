@@ -1,5 +1,7 @@
 <!Doctype html>
 <link rel="stylesheet" href="./css/details.css">
+<link rel="icon" type="image/png" href="favicon.ico">
+<title id="title"></title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <body>
@@ -8,6 +10,11 @@
         <div id="home"></div>
         <div id="next"></div>
     </div>
+
+    <br/>
+
+    <hr class="solid">
+
     <div id='titleDiv'></div>
     <div id='detailsDiv'></div>
 </body>
@@ -55,8 +62,11 @@ if(prevTileNum != -1) {
             .addClass('menuImg');
 
     prevAnchor = $('<a>')
+            .attr('id', 'prevAnchor')
             .attr('href','details.html?tile=' + prevTileNum)
-            .append(prevImg);
+            .append(prevImg)
+            .append("<br/>< Prev Tile");
+
             
     $('#prev').append(prevAnchor);
 }
@@ -67,8 +77,11 @@ if(nextTileNum != -1) {
             .addClass('menuImg');
 
     nextAnchor = $('<a>')
+            .attr('id', 'nextAnchor')
             .attr('href','details.html?tile=' + nextTileNum)
-            .append(nextImg);
+            .append(nextImg)
+            .append("<br/> Next Tile >");
+
             
     $('#next').append(nextAnchor);
 }
@@ -78,8 +91,11 @@ homeImg = $('<img>')
             .attr('id', 'homeIcon');
 
     homeAnchor = $('<a>')
+            .attr('id', 'homeAnchor')
             .attr('href','index.html')
-            .append(homeImg);
+            .append(homeImg)
+            .append("<br/>Home");
+
             
     $('#home').append(homeAnchor);
 
@@ -457,11 +473,14 @@ finalBody = obj.tile[tileNum].finalBody;
 
 console.log(obj);
 
+$('#title').append('It\'s Not Sew Hard - ' + title);
+
 h1 = $('<h1>');
 h1.addClass('sansserif');
 h1.append(title);
 
 $('#titleDiv').append(h1);
+
 
 for(i = 0; i < body.length; i++) {
     p = $('<p>')

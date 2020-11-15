@@ -43,17 +43,8 @@ a{
 .tileImg:hover, .menuImg:hover, #homeIcon:hover {
   transform: scale(1.05);
 }
-.backToQuilt {
-  color: #000000;
-}
-.prevTile{
-  float: left;
-}
-.nextTile{
-  float: right;
-}
 .galleryPic{
-  border-radius: 10%;
+  border-radius: 2%;
   width: 50%;
 }
 .li {
@@ -66,12 +57,19 @@ a{
 }
 #menu {
   height: 100px;
-  width: 100%;
+  width: 30%;
+  float: right;
 }
 #prev, #next, #home { 
   position: inline-block;
   float: left;
   height: 20px;
+  font-family: sans-serif;
+  text-align: center;
+
+}
+#prevAnchor, #nextAnchor, #homeAnchor {
+  font-size: 12pt;
 }
 /* #next {
   position: inline-block;
@@ -86,15 +84,19 @@ a{
 .menuImg {
   height: 60px;
   padding: 5px;
-  margin: 20px;
   border-radius: 10%;
   background-color: #000000;
   transition: all .5s ease-in-out;
 }
 #homeIcon {
   height: 70px;
-  margin: 20px;
   transition: all .5s ease-in-out;
+}
+.menuImg, #homeIcon {
+  margin: 20px 20px 0px 20px;
+}
+hr {
+  margin: 110px 30px 20px 30px;
 }
 
   
