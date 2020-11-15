@@ -287,9 +287,10 @@ var obj = {"tile":[
             "<ul>",
             "<li>Just like in writing, have a plan for the quilt block. You can't just start sewing (or writing) without having a sense of direction. </li>",
             
-            "   ◦   Drafting is a good way to help with planning.",
-            "   ‏◦   You must have a theme. Every paper or essay has to have a theme, just like our blocks had a theme.",
-            
+
+            "◦ Drafting is a good way to help with planning.",
+            "◦ You must have a theme. Every paper or essay has to have a theme, just like our blocks had a theme.",
+           
             "<li>When writing, you will hit roadblocks like we did while quilting. The best thing you can do is figure out the problem and find a solution. </li>",
             "<li>Benefits were also social. We talked to and learned about others in class.</li>",
             "<li>Sometimes, papers and essays will be written in a group. The quilt taught cooperation and teamwork.</li>",
@@ -530,7 +531,11 @@ for(i = 0; i < body.length; i++) {
     p = $('<p>')
     .addClass('indented')
     .addClass('sansserif')
-    .append(body[i])
+    if(body[i].includes("◦")) {
+        p.addClass("embeddedLi")
+    }
+    p.append(body[i])
+
     $('#detailsDiv').append(p);
 }
 

@@ -37,6 +37,9 @@ small {
 .indented{
   text-indent: 70px;
 }
+.embeddedLi {
+  text-indent: 100px;
+}
 .noIndent{
   text-indent: 0px;
   border-radius: 5px;
