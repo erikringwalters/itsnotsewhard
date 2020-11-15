@@ -40,7 +40,7 @@ a{
   transition: all .5s ease-in-out;
   margin: 20px;
 }
-.tileImg:hover {
+.tileImg:hover, .menuImg:hover, #homeIcon:hover {
   transform: scale(1.05);
 }
 .backToQuilt {
@@ -64,4 +64,37 @@ a{
   padding: 20px;
   margin-left: 30px;
 }
+#menu {
+  height: 100px;
+  width: 100%;
+}
+#prev, #next, #home { 
+  position: inline-block;
+  float: left;
+  height: 20px;
+}
+/* #next {
+  position: inline-block;
+  float: right;
+  height: 20px;
+}
+#home {
+  position: inline-block;
+  float: center;
+  height: 20px;
+} */
+.menuImg {
+  height: 60px;
+  padding: 5px;
+  margin: 20px;
+  border-radius: 10%;
+  background-color: #000000;
+  transition: all .5s ease-in-out;
+}
+#homeIcon {
+  height: 70px;
+  margin: 20px;
+  transition: all .5s ease-in-out;
+}
+
   
