@@ -5,6 +5,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <body>
+    <div id="mainTitleDiv">
+        <h1>It's Not Sew Hard</h1>
+    </div>
     <div id="menu">
         <div id="prev"></div>
         <div id="home"></div>
@@ -12,8 +15,9 @@
     </div>
 
     <br/>
-
-    <hr class="solid">
+    <div id="divider">
+        <hr class="solid">
+    </div>
 
     <div id='titleDiv'></div>
     <div id='detailsDiv'></div>
@@ -475,11 +479,11 @@ console.log(obj);
 
 $('#title').append('It\'s Not Sew Hard - ' + title);
 
-h1 = $('<h1>');
-h1.addClass('sansserif');
-h1.append(title);
+h2 = $('<h2>')
+    .addClass('sansserif')
+    .append(title);
 
-$('#titleDiv').append(h1);
+$('#titleDiv').append(h2);
 
 
 for(i = 0; i < body.length; i++) {
