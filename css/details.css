@@ -2,16 +2,19 @@ h1 {
   text-align: center;
   font-size: 36pt;
 }
-#mainTitleDiv {
+.mainTitleDiv {
   /* display: inline-block; */
-  width: 70%;
+  width: 60%;
   float: left;
   font-family: sans-serif;
 }
-hr {
-  margin: 20px 30px 20px 30px;
+.titleAnchor {
+  text-decoration: none;
 }
-#divider {
+hr {
+  margin: 0px 60px 20px 60px;
+}
+.divider {
   width: 100%;
   display: inline-block;
 }
@@ -57,7 +60,7 @@ a{
   transition: all .5s ease-in-out;
   margin: 20px;
 }
-.menuImg:hover, #homeIcon:hover {
+.menuImg:hover, .homeIcon:hover {
   transform: scale(1.1);
 }
 .galleryPic{
@@ -72,20 +75,22 @@ a{
   padding: 20px;
   margin-left: 30px;
 }
-#menu {
+.menu {
   height: 100px;
   width: 30%;
   float: right;
+  padding-bottom:40px;
 }
-#prev, #next, #home { 
+.prev, .next, .home { 
   position: inline-block;
   float: left;
+  width:30%;
   height: 20px;
   font-family: sans-serif;
   text-align: center;
 
 }
-#prevAnchor, #nextAnchor, #homeAnchor {
+.prevAnchor, .nextAnchor, .homeAnchor {
   font-size: 12pt;
 }
 /* #next {
@@ -105,12 +110,15 @@ a{
   background-color: #000000;
   transition: all .2s ease-in-out;
 }
-#homeIcon {
+.homeIcon {
   height: 70px;
   transition: all .2s ease-in-out;
 }
-.menuImg, #homeIcon {
+.menuImg, .homeIcon {
   margin: 20px 20px 0px 20px;
+}
+#footer {
+  margin-bottom: 30px;
 }
 
 

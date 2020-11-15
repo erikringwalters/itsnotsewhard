@@ -5,22 +5,44 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <body>
-    <div id="mainTitleDiv">
-        <h1>It's Not Sew Hard</h1>
-    </div>
-    <div id="menu">
-        <div id="prev"></div>
-        <div id="home"></div>
-        <div id="next"></div>
+    <div id="header">
+        <div class="mainTitleDiv">
+            <a class="titleAnchor" href="index.html">
+                <h1>It's Not Sew Hard</h1>
+            </a>
+        </div>
+        <div class="menu">
+            <div class="prev"></div>
+            <div class="home"></div>
+            <div class="next"></div>
+        </div>
     </div>
 
     <br/>
-    <div id="divider">
+    <div class="divider">
         <hr class="solid">
     </div>
 
     <div id='titleDiv'></div>
     <div id='detailsDiv'></div>
+
+    <br/>
+    <div class="divider">
+        <hr class="solid">
+    </div>
+
+    <div id="footer">
+        <!-- <div class="mainTitleDiv">
+            <a class="titleAnchor" href="index.html">
+                <h1>It's Not Sew Hard</h1>
+            </a>
+        </div> -->
+        <div class="menu">
+            <div class="prev"></div>
+            <div class="home"></div>
+            <div class="next"></div>
+        </div>
+    </div>
 </body>
 
 <script>
@@ -66,13 +88,13 @@ if(prevTileNum != -1) {
             .addClass('menuImg');
 
     prevAnchor = $('<a>')
-            .attr('id', 'prevAnchor')
+            .addClass('prevAnchor')
             .attr('href','details.html?tile=' + prevTileNum)
             .append(prevImg)
             .append("<br/>< Previous");
 
             
-    $('#prev').append(prevAnchor);
+    $('.prev').append(prevAnchor);
 }
 
 if(nextTileNum != -1) {
@@ -81,27 +103,27 @@ if(nextTileNum != -1) {
             .addClass('menuImg');
 
     nextAnchor = $('<a>')
-            .attr('id', 'nextAnchor')
+            .addClass('nextAnchor')
             .attr('href','details.html?tile=' + nextTileNum)
             .append(nextImg)
             .append("<br/> Next >");
 
             
-    $('#next').append(nextAnchor);
+    $('.next').append(nextAnchor);
 }
 
 homeImg = $('<img>')
             .attr('src', './images/home.svg')
-            .attr('id', 'homeIcon');
+            .addClass('homeIcon');
 
     homeAnchor = $('<a>')
-            .attr('id', 'homeAnchor')
+            .addClass('homeAnchor')
             .attr('href','index.html')
             .append(homeImg)
             .append("<br/>Home");
 
             
-    $('#home').append(homeAnchor);
+    $('.home').append(homeAnchor);
 
 var obj = {"tile":[ 
     { 
@@ -419,20 +441,36 @@ var obj = {"tile":[
             "Austin, A. W., & Oseguera, L. (2004). The declining\" equity\" of American higher education. The Review of Higher Education, 27(3), 321-341.",
             "Bazalgette, C., & Buckingham, D. (2012). Literacy, media, and multimodality: a critical response.  Literacy, 47(2), 95-102. https://doi.org/10.1111/j.1741-4369.2012.00666.x",
             "Bird, B. (2010). Meaning-Making Concepts: Basic Writer’s Access to Verbal Culture. Conference on Basic Writing, 1-18. Retrieved from https://bwe.ccny.cuny.edu/Meaning Making%20%Concept%20%20Basic%20Writer’s%20Access%20to%20Verbal%20Culure.pdf",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "Blair, C., & Michel, N. (2007). The AIDS Memorial Quilt and the contemporary culture of public commemoration. Rhetoric and Public Affairs, 595-626.",
+            "Butler, J. (1997). The Psychic Life of Power. Stanford: Stanford University Press.",
+            "Cushman, E. (2013). Wampum, Sequoyan, and Story: Decolonizing the Digital Archive. College English, 76(2), 115-135. Retrieved from http://www.jstor.org/stable/24238145",
+            "Diaz, G., & McKenna, M. B. (2017). Using the Creative Process as Pedagogy. Preparing Educators for Arts Integration: Placing Creativity at the Center of Learning, 19.",
+            "Eble, M. F., & Gaillet, L. L. (Eds.). (2008). Stories of mentoring: Theory and praxis. Parlor Press.",
+            "García-Galera, M. C., & Valdivia, A. (2014). Media prosumers. Participatory culture of audiences and media responsibility. Comunicar, 22(43), 10-13.",
+            "Haas, A.M. (2007). Wampum as hypertext: An American Indian intellectual tradition of multimedia theory and practice. Studies in American Indian Literatures, 19(4), 77-100.",
+            "Haas, A. M. (2012). Race, rhetoric, and technology: A case study of decolonial technical communication theory, methodology, and pedagogy. Journal of Business and Technical Communication, 26(3), 277-310.",
+            "Liu, J. (2013). Visual Images Interpretive Strategies in Multimodal Texts. Journal of Language Teaching and Research, 4(6), 1259-1263. doi: 10.4304",
+            "Lowndes, S. (2016). The DIY movement in art, music and publishing: Subjugated knowledges. Routledge.",
+            "MacDowell, M., Donaldson, B., Worrall, M., & Swanson, L. (2016). Quilts and Human Rights. University of Nebraska Press.",
+            "Makau, J. M., & Marty, D. L. (2001). Cooperative argumentation: A model for deliberative community. Waveland Press.",
+            "Newman, J. N. (2018). Designing the teacher: Applying 'design thinking' to improve composition pedagogy and practice. ProQuest dissertations & theses global: The humanities and social sciences collection. Eastern Kentucky University. 2-3.",
+            "Odland, J. C. (2006). Fashioning Tradition: Maya Huipiles in the Field Museum Collections. Fieldiana. Anthropology, i-67.",
+            "Powell, M. (2014). Contemporary Theories of Rhetoric course syllabus. Michigan State University, East Lansing, Michigan.",
+            "Ratto, M. & Boler, M. (Eds.) (2014) DIY Citizenship: Critical Making and Social Media. MIT Press.",
+            "Ratto, M., & Ree, R. (2012). Materializing information: 3D printing and social change. First Monday, 17(7), https://firstmonday.org/ojs/index.php/fm/article/view/3968/3273.",
+            "Ribero A.M. & Arellano, S.C. (2019). Advocating Comadrismo: A Feminist Mentoring Approach for Latinas in Rhetoric and Composition, 21(2), 334-256.",
+            "Ruiz, I. D., & Sánchez, R. (Eds.). (2016). Decolonizing rhetoric and composition studies: New Latinx keywords for theory and pedagogy. Springer.",
+            "Sano-Franchini, J. (2019). Teaching. Retrieved from http://www.jsanofranchini.com/teaching/",
+            "Schwartz, C. (2016). Critical making: Exploring the use of making as a generative tool.  Journal of Curriculum and Pedagogy, 13(3), 227-248. https://doi.org/10.1080/15505170.2016.1200168",
+            "Sheridan, D. M., Ridolfo, J., & Michel, A. J. (2012). The available means of persuasion: Mapping a theory and pedagogy of multimodal public rhetoric. Anderson, SC: Parlor Press.",
+            "Shipka, J. (2011). Toward a composition made whole. University of Pittsburgh Press.",
+            "Singh, A. A. (2010). Teaching Social Justice Advocacy: Using the Metaphor of a Quilt. Psychology of Women Quarterly, 34(4), 550–553. https://doi.org/10.1111/j.1471-6402.2010.01604.x",
+            "Sleeter, C. (2008). Preparing White teachers for diverse students. Retrieved from https://s3.amazonaws.com/academia.edu.documents/38675437/2008_Preparing_white_t achers.pdf?response-content disposition=inline%3B%20filename%3DPreparing_White_teachers_for_diverse_stu.pdf",
+            "Social Justice Sewing Academy. (2019). Home. Retrieved from http://www.sjsacademy.com/.",
+            "Sohan, V. K. (2015). \" But a quilt is more\": Recontextualizing the Discourse (s) of the Gee's Bend Quilts. College English, 77(4), 294-316.",
+            "Tobin, J. L., & Dobard, R.G. (2000). Hidden in plain view: The secret story of quilts and the Underground Railroad. Anchor.",
+            "Ybarra-Frausto, T. (1989). Rasquachismo: a Chicano sensibility. School by the River Press.",
+          
         ],
         "image":[
         ],
