@@ -91,10 +91,10 @@ a{
   height: 20px;
   font-family: sans-serif;
   text-align: center;
-
 }
 .prevAnchor, .nextAnchor, .homeAnchor {
   font-size: 12pt;
+  text-align: center;
 }
 /* #next {
   position: inline-block;
